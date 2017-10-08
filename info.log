@@ -1,0 +1,28 @@
+Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Python\Scripts\env\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python\Scripts\env\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python\Scripts\env\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python\Scripts\env\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\Python\Scripts\env\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python\Scripts\env\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "helloWorld.py", line 17, in hello_world
+    client = language.LanguageServiceClient()
+  File "D:\Python\Scripts\env\lib\site-packages\google\cloud\language_v1\gapic\language_service_client.py", line 132, in __init__
+    ssl_credentials=ssl_credentials)
+  File "D:\Python\Scripts\env\lib\site-packages\google\gax\grpc.py", line 106, in create_stub
+    credentials = _grpc_google_auth.get_default_credentials(scopes)
+  File "D:\Python\Scripts\env\lib\site-packages\google\gax\_grpc_google_auth.py", line 62, in get_default_credentials
+    credentials, _ = google.auth.default(scopes=scopes)
+  File "D:\Python\Scripts\env\lib\site-packages\google\auth\_default.py", line 286, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or
+explicitly create credential and re-run the application. For more
+information, please see
+https://developers.google.com/accounts/docs/application-default-credentials.
