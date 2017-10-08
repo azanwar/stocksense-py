@@ -37,7 +37,7 @@ def data():
     return jsonify({'stock price': a[0],'sentiment':a[1]});
 def helloWorld(ticker):
     l = []
-    b = tweepy.Cursor(api.search,
+ """   b = tweepy.Cursor(api.search,
                                q=ticker,
                                count=1,
                                result_type="mixed",
@@ -95,7 +95,7 @@ def helloWorld(ticker):
 
     r = requests.get("https://www.blackrock.com/tools/hackathon/performance?identifiers="+ticker, params=payload)
     a =r.json()
-    c = json_dumps(a)
+    c = json_dump(a)
     br = [c['resultMap']['RETURNS'][0]['returnsMap'][str(20170929)]['oneDay']]
     br.append(c['resultMap']['RETURNS'][0]['returnsMap'][str(20170928)]['oneDay'])
     br.append(c['resultMap']['RETURNS'][0]['returnsMap'][str(20170930)]['oneDay'])
