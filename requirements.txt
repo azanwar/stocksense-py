@@ -36,4 +36,4 @@ sklearn==0.0
 SQLAlchemy==1.1.14
 tweepy==3.5.0
 urllib3==1.22
-Werkzeug==0.12.2
+Werkzeug==0.15.3
